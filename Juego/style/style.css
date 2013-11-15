@@ -1,0 +1,13 @@
+header {
+	height: 50px;
+	border-bottom: 1px #000 solid;
+}
+.title {
+	font-style: italic;
+	margin-left: 50px;
+	margin-bottom: 0px;
+	margin-right: 0px;
+}
+#menu_bar ul li{
+	float:right;
+}
