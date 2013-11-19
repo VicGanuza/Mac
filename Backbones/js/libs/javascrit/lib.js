@@ -1,9 +1,11 @@
 define([
-  'jQuery',
-  'jquery_ui'
-], function($, jqueryUi){
-		$('#menu_bar').tabs();
- });
-
+'jquery',
+'jquery_ui'
+], function ($){
+	$(document).ready(function() {
+		//$('.menu').tabs();
+		$('.date').datepicker({dateFormat: 'dd/mm/yy', minDate: 0, showAnim: 'show'});
+	});
+});
 
 

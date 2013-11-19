@@ -1,13 +1,33 @@
 <div class="main">
-	<p>Fecha Ingreso</p><span><input id="date" type="text" size="8" /></span>
-	<p>Fecha Egreso</p><input id="date" type="text" size="8">
-	<p>Cantidad Pasajeros:</p>
-	<p>Cama Matrimonial</p><input type="text" size="2">
-	<p>Cama Individual</p><input  type="text" size="2">
-	<p>Necesita cuna?</p>
-	<select id="list">
-		<option value="yes">Yes</option>
-		<option value="no">No</option>
-	</select>
+	<div>
+		<div class="left">
+			<p>Fecha Ingreso</p><input type="text" class="date" />
+		</div>
+		<div class="right">
+		    <p>Fecha Egreso</p><input type="text" class="date"  />
+	    </div>
+    </div>
+	<div>
+		<p>Cantidad Pasajeros</p> 
+		<input type="text" value='0' id="cant_pas" />
+	</div>
+	<div>
+		<p>Cant. plazas matrimoniales</p>
+		<input type="text" size="2" value='0'>
+	</div>
+	<div>
+		<p>Cant. plazas individuales</p>
+		<input  type="text" size="2" value='0'>
+	</div>
+	<div>
+		<p>Necesita cuna?</p>
+		<select id="list">
+			<option value="no">No</option>
+			<option value="yes">Yes</option>
+		</select>
+	</div>
+	<div>
+		<input id="button_search" type="button" value="Buscar">
+	</div>
 </div>
 

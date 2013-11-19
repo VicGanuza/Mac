@@ -4,11 +4,19 @@
 // Require.js allows us to configure shortcut alias
 // Their usage will become more apparent futher along in the tutorial.
 require.config({
+  shim: {
+
+    'jquery_ui': {
+            deps: ['jquery'],
+            exports: 'jQuery'
+        }
+
+  },
   paths: {
     jquery: 'libs/jquery/jquery-min',
     underscore: 'libs/underscore/underscore-min',
     backbone: 'libs/backbone/backbone-min',
-    jquery_ui: 'libs/jquery/jqueryUI/ui/jquery-ui',// js\libs\jquery\jqueryUI\ui\
+    jquery_ui: 'libs/jquery/jqueryUI/js/jquery-ui-1.10.3.custom',// js\libs\jquery\jqueryUI\ui\
     templates: '../templates'
   }
 

@@ -62,9 +62,22 @@ h1{
     left: 0px;
     padding: 0px;
     margin: 0px;
-    width: 500px;
+    width: 50%;
     float: left;
     overflow: hidden;
+  }
+
+  #page .main p{
+      margin-right: 20px;
+      float:left;
+  }
+
+  #page .main input {
+    width: 100px;
+  }
+
+  #page .main select {
+    width: 70px;
   }
 
  #page .sidebar {
@@ -286,3 +299,14 @@ h1{
     padding:0px;
  }
 
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+#button_search {
+  float:right;
+}
