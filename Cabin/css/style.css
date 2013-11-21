@@ -7,6 +7,14 @@ body {
   background: #ebebeb;
 }
 
+/** Helpers **/
+
+.right {
+  float:right;
+}
+.left {
+  float: left;
+}
 #container {
   width: 960px;
   margin: auto;
@@ -298,15 +306,3 @@ h1{
     margin:0px;
     padding:0px;
  }
-
-.right {
-  float: right;
-}
-
-.left {
-  float: left;
-}
-
-#button_search {
-  float:right;
-}
