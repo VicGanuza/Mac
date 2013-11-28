@@ -15,6 +15,7 @@ define([
       'projects': 'showProjects',
       'users': 'showContributors',
       
+      
       // Default
       '*actions': 'defaultAction'
     }

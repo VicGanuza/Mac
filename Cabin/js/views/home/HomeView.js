@@ -3,8 +3,10 @@ define([
   'underscore',
   'backbone',
   'views/sidebar/SidebarView',
-  'text!templates/home/homeTemplate.html'
-], function($, _, Backbone, SidebarView, homeTemplate){
+  'views/projects/ProjectsView',
+  'text!templates/home/homeTemplate.html',
+  'router'
+], function($, _, Backbone, SidebarView, ProjectsView ,homeTemplate, Router){
 
   var HomeView = Backbone.View.extend({
     el: $("#page"),
@@ -20,7 +22,11 @@ define([
       var cant_mat = $('#plaz_mat').val();
       var cant_indv = $('#plaz_ind').val();
 
-      alert('Desde: ' + ini + ' hasta: '+ leave + '\n' + cant_pas + ' pasajeros ' + cant_mat + ' camas Matrimoniales \n' + cant_indv + ' camas individuales');
+      var projectsView = new ProjectsView();
+        projectsView.render();
+      //this.router.navigate("users", true);
+
+      //alert('Desde: ' + ini + ' hasta: '+ leave + '\n' + cant_pas + ' pasajeros ' + cant_mat + ' camas Matrimoniales \n' + cant_indv + ' camas individuales');
     },
 
     render: function(){
@@ -33,6 +39,14 @@ define([
       sidebarView.render();
  */
     }
+    /*,
+
+    initialize: function() {
+
+      this.router = new Router.AppRouter;
+
+     // backbone.history.start();
+    }*/
 
   });
 
