@@ -1,0 +1,21 @@
+
+<div class="navbar">
+    <div class="navbar-inner">
+      <ul class="nav width_100">
+        <li class="artist margin-left_25">Artista</li>
+        <li class="title">Titulo</li>
+        <li class="resid">Lugar</li>
+      </ul>
+     <hr>
+     <% _.each(sonoros, function(sonoro){ %>
+	 <ul class="list-art">
+	  <a href="#">
+	   <li class="artist"><%= sonoro.get("artista") %></li> 
+	   <li class="title"><%= sonoro.get("titulo") %></li> 
+	   <li class="resid"><%= sonoro.get("residencia") %></li> 
+	  </a>
+     </ul>
+     <hr>
+     <% }); %>
+    </div>
+</div>
