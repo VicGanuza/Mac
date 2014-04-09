@@ -7,9 +7,10 @@ define([
   'views/sonoros/SonorosView',
   'views/videos/VideosView',
   'views/contacto/ContactoView',
-  'views/loggin/LogginView'
+  'views/loggin/LogginView',
+  'views/obra/ObraView'
   // 'views/footer/FooterView'
-], function($, _, Backbone, HomeView, SonorosView, VideosView, ContactoView, LogginView/*, FooterView*/) {
+], function($, _, Backbone, HomeView, SonorosView, VideosView, ContactoView, LogginView, ObraView/*, FooterView*/) {
   
   var AppRouter = Backbone.Router.extend({
     routes: {
@@ -18,6 +19,8 @@ define([
       'video':'showVideos',
       'contacto':'showContacto',
       'log_in':'showLoggin',
+      'obra/:id':'showObra',
+      
      // 'users': 'showContributors',
       
       // Default
@@ -38,7 +41,6 @@ define([
     });
 
     app_router.on('route:showVideos', function(){
-   
         // Call render on the module we loaded in via the dependency array
         var videosView = new VideosView();
         videosView.render();
@@ -49,6 +51,15 @@ define([
         // Call render on the module we loaded in via the dependency array
         var contactoView = new ContactoView();
         contactoView.render();
+
+    });
+
+    app_router.on('route:showObra', function(id){
+      console.log(id);
+   
+        // Call render on the module we loaded in via the dependency array
+        var obraView = new ObraView();
+        obraView.render(id);
 
     });
 

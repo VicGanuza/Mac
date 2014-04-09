@@ -9,7 +9,7 @@
      <hr>
      <% _.each(videos, function(video){ %>
      <ul class="list-art">
-      <a href="#">
+      <a href="#/obra/<%= video.get('id')%>">
        <li class="artist"><%= video.get("artista") %></li> 
        <li class="title"><%= video.get("titulo") %></li> 
        <li class="resid"><%= video.get("residencia") %></li> 

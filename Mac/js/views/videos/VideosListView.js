@@ -18,7 +18,7 @@ define([
         videos: this.collection.models,
         _: _ 
       };
-
+console.log(data);
       var compiledTemplate = _.template( videosListTemplate, data );
       $("#videos-list").html( compiledTemplate ); 
     }
