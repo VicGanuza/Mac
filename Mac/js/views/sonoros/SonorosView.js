@@ -11,8 +11,8 @@ define([
   var SonorosView = Backbone.View.extend({
     el: $("#page"),
     render: function(){
-      $('.menu li').removeClass('active');
-      $('.menu li a[href="'+window.location.hash+'"]').parent().addClass('active');
+      $('.izquierda li').removeClass('active');
+      $('.izquierda li a[href="'+window.location.hash+'"]').parent().addClass('active');
       this.$el.html(sonorosTemplate);
 
       var sonoro0 = new SonorosModel({artista: 'Cristina Kasem ', titulo: 'Mundus imaginalis', residencia:'CABA, Buenos Aires'}); 

@@ -11,6 +11,8 @@ define([
   var VideosView = Backbone.View.extend({
     el: $("#page"),
     render: function(){
+      $('.izquierda li').removeClass('active');
+      $('.izquierda li a[href="'+window.location.hash+'"]').parent().addClass('active');
       
       this.$el.html(videosTemplate);
 

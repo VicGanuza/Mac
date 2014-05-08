@@ -1,0 +1,33 @@
+define([
+  'jquery',
+  'underscore',
+  'backbone',
+  'models/concurso/ConcursoModel',
+  'collections/concurso/ConcursosCollection',
+  'text!templates/right/rightContentTemplate.html'
+], function($, _, Backbone, ConcursoModel, ConcursoCollection, rightContentTemplate){
+
+  var DetalleView = Backbone.View.extend({
+    el: $('#panel_contenidos'),
+    render: function(){
+
+     $('#panel_contenidos li').removeClass('active_right');
+     $('#panel_contenidos li a[href="'+window.location.hash+'"]').parent().addClass('active_right'); 
+
+     /*var  collection = new ConcursoCollection();
+     var data = {
+      concursos: collection.models,
+       _: _ 
+      };    
+        
+
+      var compiledTemplate = _.template(rightContentTemplate, data); 
+     // this.el.html(compiledTemplate);
+      $('#panel_contenidos').html(compiledTemplate);*/
+    }
+
+  });
+
+  return DetalleView;
+  
+});

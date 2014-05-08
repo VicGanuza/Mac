@@ -8,9 +8,10 @@ define([
   'views/videos/VideosView',
   'views/contacto/ContactoView',
   'views/loggin/LogginView',
-  'views/obra/ObraView'
+  'views/obra/ObraView',
+  'views/right/RigthView'
   // 'views/footer/FooterView'
-], function($, _, Backbone, HomeView, SonorosView, VideosView, ContactoView, LogginView, ObraView/*, FooterView*/) {
+], function($, _, Backbone, HomeView, SonorosView, VideosView, ContactoView, LogginView, ObraView, RightView) {
   
   var AppRouter = Backbone.Router.extend({
     routes: {
@@ -78,7 +79,8 @@ define([
         homeView.render();
     });
 
-    // var footerView = new FooterView();
+    var rightView = new RightView();
+    rightView.render();
 
     Backbone.history.start();
   };
